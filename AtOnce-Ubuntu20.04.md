@@ -5,7 +5,7 @@ Ubuntu 20.04.2.0-desktop-amd64 Linux Image
 Java 16.0.2
 Apache Maven 3.8.2
 
-**### In case Java is not installed**
+### **In case Java is not installed**
 
 ```
 sudo add-apt-repository ppa:linuxuprising/java
@@ -20,7 +20,7 @@ sudo apt install oracle-java16-installer
 sudo dpkg --configure -a
 ```
 
-**### In case Maven is not installed**
+### **In case Maven is not installed**
 
 Download Maven Binary tar.gz archive from https://maven.apache.org/download.cgi and extract it.
 
@@ -64,7 +64,7 @@ source /etc/profile.d/maven.sh
 ```
 
 
-**### Pick a folder to download Siafu Simulator:**
+### **Pick a folder to download Siafu Simulator:**
 
 ```
 git clone https://github.com/miquelmartin/Siafu.git
@@ -77,14 +77,9 @@ sudo apt-get upgrade
 ```
 
 
-**### Replace the pom.xml with the one on this respository and run**
+### **Replace the pom.xml with the one on this respository and run**
 ```
 mvn -X package
 ```
 
 In case you still get error, go /home/ folder, press Ctrl + h to show the hide folders and delete completely the ./m2 folder.
-
-
-
-
-
