@@ -24,36 +24,63 @@ sudo dpkg --configure -a
 
 Download Maven Binary tar.gz archive from https://maven.apache.org/download.cgi and extract it.
 
+```
 sudo mv /FOLDER_WHERE_THE_ARCHIVE_IS_LOCATED/apache-maven-*-bin.tar.gz /tmp/
+```
+```
 sudo tar xf /tmp/apache-maven-*.tar.gz -C /opt
+```
+```
 sudo ln -s /opt/apache-maven-* /opt/maven
+```
+Check if Maven home is = /opt/maven
+```
 mvn -version
-
+```
+```
 sudo nano /etc/profile.d/maven.sh
+```
 
 Copy and paste the lines bellow, after checking if the paths are correct.
 
+```
 export JAVA_HOME=/usr/lib/jvm/java-16-oracle
+```
+```
 export M2_HOME=/opt/maven
+```
+```
 export MAVEN_HOME=/opt/maven
+```
+```
 export PATH=${M2_HOME}/bin:${PATH}
-
-
+```
+Now make maven.sh executable and restart it.
+```
 sudo chmod +x /etc/profile.d/maven.sh
+```
+```
 source /etc/profile.d/maven.sh
+```
 
 
 * ### Pick a folder to download Siafu Simulator:
 
+```
 git clone https://github.com/miquelmartin/Siafu.git
+```
+```
 sudo apt-get update
+```
+```
 sudo apt-get upgrade
+```
 
 
 * ### Replace the pom.xml with the one on this respository and run
-
+```
 mvn -X package
-
+```
 
 In case you still get error, go /home/ folder, press Ctrl + h to show the hide folders and delete completely the ./m2 folder.
 
